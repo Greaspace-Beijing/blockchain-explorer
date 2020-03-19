@@ -38,17 +38,17 @@
 			"mspid": "Org1MSP",
 			"fullpath": true,
 			"adminPrivateKey": {
-				"path": "/home/liyi/fabric-samples/first-network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/ae8d6a56c4ccfa62179f9e42d26f137bd78efb3f1f2c36bb3321018ae2f1c8f2_sk"
+				"path": "/Users/liyi/go/src/github.com/hyperledger/fabric/work_dir/first-network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/1ba924776f2a34311814f4b7916b368f0043c92be858afc3ad46d4c5d122d66e_sk"
 			},
 			"signedCert": {
-				"path": "/home/liyi/fabric-samples/first-network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"
+				"path": "/Users/liyi/go/src/github.com/hyperledger/fabric/work_dir/first-network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"
 			}
 		}
 	},
 	"peers": {
 		"peer0.org1.example.com": {
 			"tlsCACerts": {
-				"path": "/home/liyi/fabric-samples/first-network/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt"
+				"path": "/Users/liyi/go/src/github.com/hyperledger/fabric/work_dir/first-network/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt"
 			},
 			"url": "grpcs://localhost:7051",
 			"eventUrl": "grpcs://localhost:7053",

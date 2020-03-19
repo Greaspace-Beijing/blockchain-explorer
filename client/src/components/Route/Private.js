@@ -14,7 +14,7 @@ import { connect } from 'react-redux';
 import { authSelectors } from '../../state/redux/auth';
 
 export function Private({ render, auth, ...rest }) {
-	const redirect = !auth;
+	const redirect = auth;
 	return (
 		<Route
 			{...rest}
