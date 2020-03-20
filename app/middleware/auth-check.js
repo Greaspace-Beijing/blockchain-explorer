@@ -4,42 +4,34 @@
 
 // @ts-check
 
-/*
- * const jwt = require('jsonwebtoken');
- * @ts-ignore
- * const config = require('../explorerconfig.json');
- * @ts-check
- */
+const jwt = require('jsonwebtoken');
+// @ts-ignore
+const config = require('../explorerconfig.json');
+// @ts-check
 /**
  *  The Auth Checker middleware function.
  */
 module.exports = (req, res, next) => {
-	/*
-	 * if (!req.headers.authorization) {
-	 * 	return res.status(401).end();
-	 * }
-	 */
+	if (!req.headers.authorization) {
+		return res.status(401).end();
+	}
 
-	/*
-	 * // Get the last part from a authorization header string like "bearer token-value"
-	 * const token = req.headers.authorization.split(' ')[1];
-	 */
+	// Get the last part from a authorization header string like "bearer token-value"
+	const token = req.headers.authorization.split(' ')[1];
 
-	/*
-	 * // Decode the token using a secret key-phrase
-	 * return jwt.verify(token, config.jwt.secret, (err, decoded) => {
-	 * 	// The 401 code is for unauthorized status
-	 * 	if (err) {
-	 * 		return res.status(401).end();
-	 * 	}
-	 */
+	// Decode the token using a secret key-phrase
+	return jwt.verify(token, config.jwt.secret, (err, decoded) => {
+		// The 401 code is for unauthorized status
+		if (err) {
+			return res.status(401).end();
+		}
 
-	// 	const userId = decoded.sub;
-	const userId = 'admin';
-	req.userId = userId;
+		const userId = decoded.sub;
 
-	// TODO: check if a user exists, otherwise error
+		req.userId = userId;
 
-	return next();
-	// });
+		// TODO: check if a user exists, otherwise error
+
+		return next();
+	});
 };

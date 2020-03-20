@@ -60,10 +60,6 @@ export class App extends Component {
 
 	/* istanbul ignore next */
 	render() {
-		this.props = {
-			classes: { main: 'main' },
-			auth: true
-		};
 		const { auth } = this.props;
 		const { loading } = this.state;
 		if (auth && loading) {
