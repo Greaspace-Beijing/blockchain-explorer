@@ -39,6 +39,10 @@ class Explorer {
 	constructor() {
 		this.app = new Express();
 
+		// Solve cross-domain
+		const cors = require('cors');
+		this.app.use(cors());
+
 		// set up rate limiter: maximum of 1000 requests per minute
 
 		const limiter = new RateLimit({

@@ -10,7 +10,7 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import classnames from 'classnames';
 import Main from '../Main';
 import Header from '../Header';
-import Footer from '../Footer';
+// import Footer from '../Footer';
 import LandingPage from '../View/LandingPage';
 import ErrorMessage from '../ErrorMessage';
 import { chartSelectors } from '../../state/redux/charts';
@@ -85,7 +85,7 @@ export class App extends Component {
 						<Private path="/" render={routeprops => <Main {...routeprops} />} />
 					</Switch>
 				</Router>
-				{auth && <Footer />}
+				{/* {auth && <Footer />} */}
 			</div>
 		);
 	}
